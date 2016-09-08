@@ -1,0 +1,5 @@
+/elixir_chat/_build
+/elixir_chat/cover
+/elixir_chat/deps
+/elixir_chat/erl_crash.dump
+*.ez
