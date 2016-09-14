@@ -27,6 +27,6 @@ defmodule ElixirChat.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:amqp, "0.1.4"}, {:json, "~> 0.3.0"}]
+    [{:amqp, "0.1.4"}, {:json, "~> 0.3.0"}, {:amqp_client, git: "https://github.com/dsrosario/amqp_client.git", branch: "erlang_otp_19", override: true}]
   end
 end
