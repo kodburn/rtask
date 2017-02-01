@@ -7,6 +7,7 @@ Install the following packages:
 * [Elixir](http://elixir-lang.org/install.html)
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 * [RabbitMQ](https://www.rabbitmq.com/download.html)
+
 ### Configure the environment
 Set the RUBY_THREAD_VM_STACK_SIZE variable to 104857600 to avoid SystemStackError in the Ruby client
 ```
