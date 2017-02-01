@@ -10,7 +10,7 @@ defmodule ElixirChat do
 
     AMQP.Exchange.fanout(channel, "super.chat")
     AMQP.Queue.bind channel, queue_data.queue, "super.chat"
-
+    
     listen_for_messages(channel, queue_data.queue)
     wait_for_message(user, channel)
   end
@@ -22,6 +22,14 @@ defmodule ElixirChat do
   end
 
   def listen_for_messages(channel, queue_name) do
+    AMQP.Queue.subscribe channel, queue_name, fn(payload, metadata) ->
+      { :ok, data } = JSON.decode(payload)
+      display_message(data["user"], data["message"])
+    end
+  end
+
+  def display_message(user, message) do
+    IO.puts "#{user}: #{message}"
   end
 
   def publish_message(user, message, channel) do
