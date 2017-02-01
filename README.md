@@ -11,35 +11,37 @@ Install the following packages:
 Set the RUBY_THREAD_VM_STACK_SIZE variable to 104857600 to avoid SystemStackError in the Ruby client
 ```
 export RUBY_THREAD_VM_STACK_SIZE=104857600
-``
+```
 ## Run
 ### Start RabbitMQ server
 ```
 rabbitmq-server
 ```
 ### Launch Elixir client
-1. Go to elixir_chat directory
+Go to elixir_chat directory
 ```
 cd elixir_chat
 ```
-2. Install dependencies:
+Install dependencies
 ```
 mix deps.get
 ```
-3. Run the client:
+Run the client
 ```
 mix run
 ```
 ### Launch Ruby client
-1. Go to ruby_chat directory
+Go to ruby_chat directory
 ```
 cd ruby_chat
 ```
-2. Install gems
-    ```
-    bundle install
-    ```
-3. Run the client:
-    ```
-    ruby ruby_chat.rb
-    ```
+Install gems
+```
+bundle install
+```
+Run the client
+```
+ruby ruby_chat.rb
+```
+## Close
+Type Ctrl+D in both app to exit the chat
