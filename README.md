@@ -1,5 +1,7 @@
 # Elixir/Ruby RabbitMQ Chat
-Chat has two clients written in Ruby, Elixir and uses RabbitMQ as a server
+This simple chat has two clients written in Ruby and Elixir; uses RabbitMQ as a server.
+
+![ScreenShot](https://cloud.githubusercontent.com/assets/10180759/22531711/f73cf3ec-e8e2-11e6-99c9-30cfa37bb4d4.png)
 
 ## Set up
 ### Prerequisites
