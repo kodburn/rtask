@@ -18,6 +18,9 @@ class RubyChat
     @exchange = @channel.fanout('super.chat')
 
     listen_for_messages
+
+    # Use loop to avoid recursion
+    loop { wait_for_message }
   end
 
   # Displays the decoded message
@@ -45,10 +48,8 @@ class RubyChat
   def wait_for_message
     message = gets.strip
     publish_message(@current_user, message)
-    wait_for_message
   end
 end
 
 # Creates new chat and wait for user to input
-chat = RubyChat.new
-chat.wait_for_message
+RubyChat.new
