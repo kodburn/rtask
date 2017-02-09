@@ -1,5 +1,7 @@
 # Elixir/Ruby RabbitMQ Chat
-Chat has two clients written in Ruby, Elixir and uses RabbitMQ as a server
+This simple chat has two clients written in Ruby and Elixir; uses RabbitMQ as a server.
+
+![ScreenShot](https://cloud.githubusercontent.com/assets/10180759/22531711/f73cf3ec-e8e2-11e6-99c9-30cfa37bb4d4.png)
 
 ## Set up
 ### Prerequisites
@@ -14,28 +16,30 @@ Install the following packages:
 rabbitmq-server
 ```
 ### Launch Elixir client
-1. Go to elixir_chat directory
+Go to elixir_chat directory
 ```
 cd elixir_chat
 ```
-2. Install dependencies:
+Install dependencies
 ```
 mix deps.get
 ```
-3. Run the client:
+Run the client
 ```
 mix run
 ```
 ### Launch Ruby client
-1. Go to ruby_chat directory
+Go to ruby_chat directory
 ```
 cd ruby_chat
 ```
-2. Install gems
-    ```
-    bundle install
-    ```
-3. Run the client:
-    ```
-    ruby ruby_chat.rb
-    ```
+Install gems
+```
+bundle install
+```
+Run the client
+```
+ruby ruby_chat.rb
+```
+## Close
+Type Ctrl+D in both app to exit the chat
